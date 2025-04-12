@@ -37,9 +37,6 @@ Then, run the installation script:
 ./install.sh
 ```
 
-./install.sh
-```
-
 ### Usage
 To use BettyPy, you can run the following command in your terminal:
 
