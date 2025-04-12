@@ -18,6 +18,7 @@ func (c *DockstringChecker) Run() []string {
     var errors []string
 
     lines := strings.Split(c.Content, "\n")
+    
     for i, line := range lines {
         trimmedLine := strings.TrimSpace(line)
         if strings.HasPrefix(trimmedLine, "class ") || strings.HasPrefix(trimmedLine, "def ") {

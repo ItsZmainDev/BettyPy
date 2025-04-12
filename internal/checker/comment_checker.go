@@ -13,6 +13,7 @@ func NewCommentChecker(content []string, filename string) *CommentChecker {
 
 func (c *CommentChecker) Run() []string {
     var errors []string
+
     for i, line := range c.Content {
         trimmedLine := line
         hashCount := 0
@@ -33,6 +34,7 @@ func (c *CommentChecker) Run() []string {
             }
         }
     }
+    
     return errors
 }
 
