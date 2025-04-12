@@ -2,10 +2,6 @@ package checker
 
 import "fmt"
 
-type Checker interface {
-	Run() []string
-}
-
 type LineLengthChecker struct {
     Content  []string
     Filename string

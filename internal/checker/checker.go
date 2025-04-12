@@ -5,6 +5,10 @@ import (
     "os"
 )
 
+type Checker interface {
+    Run() []string
+}
+
 func ReadFile(filename string) ([]string, error) {
     file, err := os.Open(filename)
     if err != nil {
