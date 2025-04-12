@@ -1,0 +1,2 @@
+This is not a Python file.
+This is a test file to check the behavior of the BettyPy tool when it encounters a non-Python file.
