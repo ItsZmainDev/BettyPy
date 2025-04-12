@@ -57,25 +57,7 @@ chmod +x "$INSTALL_DIR/$SCRIPT_NAME"
 # Create the man page
 echo "Installing the man page..."
 mkdir -p "$MAN_DIR"
-cat << EOF > "$MAN_DIR/$MAN_PAGE_NAME"
-.TH bettypy 1 "12 April 2025" "BettyPy v1.0" "Man page for bettypy"
-.SH NAME
-bettypy \- Python style checker for Betty
-.SH SYNOPSIS
-.B bettypy
-.I python_file
-.SH DESCRIPTION
-BettyPy is a Python style checker tool based on Betty's style rules.
-.SH OPTIONS
-No specific options are required. Simply provide the path to the Python file to analyze.
-.SH EXAMPLES
-Usage example:
-.PP
-.B bettypy
-.I example.py
-.SH AUTHORS
-Martin Clement \- https://github.com/ItsZmainDev
-EOF
+cp "man/$MAN_PAGE_NAME" "$MAN_DIR/"
 
 # Update the man database
 echo "Updating the man database..."
