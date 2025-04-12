@@ -40,6 +40,7 @@ func main() {
         checker.NewCommentChecker(strings.Split(content, "\n"), filename),
         checker.NewNewLineChecker(content, filename),
         checker.NewDockstringChecker(content, filename),
+        checker.NewIdentationChecker(strings.Split(content, "\n"), filename),
     }
 
     totalErrors := 0
