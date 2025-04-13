@@ -23,6 +23,7 @@ BettyPy is a Python style guide for the Betty programming language. It provides 
 | Comments | Check comment |
 | Last Line | Ensure the last line of a file is a newline. |
 | Anotations | Check for anotations: TODO, FIXME, etc. |
+| Empty files | Check for empty files. |
 
 ### Installation
 To install BettyPy, execute the following command:
