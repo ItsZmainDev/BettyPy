@@ -22,6 +22,7 @@ BettyPy is a Python style guide for the Betty programming language. It provides 
 | Docstrings | Use docstrings to describe modules, classes, and functions. |
 | Comments | Check comment |
 | Last Line | Ensure the last line of a file is a newline. |
+| Anotations | Check for anotations: TODO, FIXME, etc. |
 
 ### Installation
 To install BettyPy, execute the following command:
