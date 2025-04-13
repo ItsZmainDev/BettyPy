@@ -57,6 +57,7 @@ func main() {
                 checker.NewDockstringChecker(content, filename),
                 checker.NewIdentationChecker(strings.Split(content, "\n"), filename),
                 checker.NewAnotationChecker(content, filename),
+                checker.NewEmptyFileChecker(content, filename),
             }
 
             for _, c := range checkers {
