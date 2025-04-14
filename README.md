@@ -21,6 +21,7 @@ BettyPy is a Python style guide for the Betty programming language. It enforces 
 - [Requirements](#requirements)
 - [Contributing](#contributing)
 - [License](#license)
+- [Acknowledgments](#acknowledgments)
 - [Authors](#authors)
 
 ---
@@ -146,6 +147,22 @@ Thank you for helping improve BettyPy!
 
 ### License
 This project is licensed under the Mozilla Public License 2.0. See the [LICENSE](LICENSE) file for details.
+
+---
+
+### Acknowledgments
+
+<p align="center">
+  <strong>Holberton School</strong>
+</p>
+
+<p align="center">
+  <img src="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/79001/331125_630361.png" alt="Holberton School Logo" width="150">
+</p>
+
+<p align="center">
+  This project was inspired by the Betty style guide for C, developed at <strong>Holberton School</strong>. BettyPy was created as a personal project to bring similar coding standards to Python. If it can help students or developers, all the better!
+</p>
 
 ---
 
