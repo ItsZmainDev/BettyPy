@@ -25,6 +25,7 @@ BettyPy is a Python style guide for the Betty programming language. It provides 
 | Anotations | Check for anotations: TODO, FIXME, etc. |
 | Imports | Check for unused imports. |
 | Last Line | Ensure the last line of a file is a newline. |
+| Function Names | Check for function names that do not follow the naming convention. (snake_case). |
 
 ### Installation
 To install BettyPy, execute the following command:
