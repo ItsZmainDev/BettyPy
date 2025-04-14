@@ -17,13 +17,14 @@ BettyPy is a Python style guide for the Betty programming language. It provides 
 ### Features
 | Feature | Description |
 | ------- | ----------- |
+| Empty files | Check for empty files. |
 | Line Length | Limit lines to 80 characters. |
 | Indentation | Use 4 spaces per indentation level. |
 | Docstrings | Use docstrings to describe modules, classes, and functions. |
 | Comments | Check comment |
-| Last Line | Ensure the last line of a file is a newline. |
 | Anotations | Check for anotations: TODO, FIXME, etc. |
-| Empty files | Check for empty files. |
+| Imports | Check for unused imports. |
+| Last Line | Ensure the last line of a file is a newline. |
 
 ### Installation
 To install BettyPy, execute the following command:
