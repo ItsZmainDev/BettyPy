@@ -54,7 +54,7 @@ func (c *UnusedImportChecker) Run() []string {
 
     for imp, used := range imports {
         if !used {
-            errors = append(errors, fmt.Sprintf("%s: unused import '%s'", c.Filename, imp))
+            errors = append(errors, fmt.Sprintf("%s:%d: Unused import: %s", c.Filename, 0, imp))
         }
     }
 
