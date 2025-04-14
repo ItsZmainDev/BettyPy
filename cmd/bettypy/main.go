@@ -59,6 +59,7 @@ func main() {
                 checker.NewAnotationChecker(content, filename),
                 checker.NewEmptyFileChecker(content, filename),
                 checker.NewUnusedImportChecker(strings.Split(content, "\n"), filename),
+                checker.NewFunctionChecker(strings.Split(content, "\n"), filename),
             }
 
             for _, c := range checkers {
