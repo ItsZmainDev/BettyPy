@@ -1,55 +1,73 @@
 # BettyPy - Python Style Guide for Betty
 
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MPL%202.0-blue)
+![Python](https://img.shields.io/badge/python-3.x-blue)
+![Version](https://img.shields.io/badge/version-1.0.0-orange)
+![Linux](https://img.shields.io/badge/os-linux-blue)
+![macOS](https://img.shields.io/badge/os-macOS-blue)
+![Windows](https://img.shields.io/badge/os-windows-yellow)
+
+BettyPy is a Python style guide for the Betty programming language. It enforces best practices and ensures clean, readable, and maintainable code.
+
+---
+
 ### Table of Contents
 - [Description](#description)
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Example](#example)
-- [License](#license)
+- [Requirements](#requirements)
 - [Contributing](#contributing)
+- [License](#license)
 - [Authors](#authors)
+
+---
 
 ### Description
 
-BettyPy is a Python style guide for the Betty programming language. It provides a set of rules and guidelines for writing clean, readable, and maintainable code in Betty. The goal of BettyPy is to promote best practices and improve the overall quality of code written in Betty.
+BettyPy provides a set of rules and guidelines for writing Python code in the Betty programming language. It helps developers maintain consistent coding standards and improve code quality.
+
+---
 
 ### Features
-| Feature | Description |
-| ------- | ----------- |
-| Empty files | Check for empty files. |
-| Line Length | Limit lines to 80 characters. |
-| Indentation | Use 4 spaces per indentation level. |
-| Docstrings | Use docstrings to describe modules, classes, and functions. |
-| Comments | Check comment |
-| Anotations | Check for anotations: TODO, FIXME, etc. |
-| Imports | Check for unused imports. |
-| Last Line | Ensure the last line of a file is a newline. |
-| Function Names | Check for function names that do not follow the naming convention. (snake_case). |
+| Feature        | Description                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| Empty files    | Detects and warns about empty files in the project.                        |
+| Line Length    | Ensures that lines do not exceed 80 characters for better readability.     |
+| Indentation    | Enforces 4 spaces per indentation level to maintain consistent formatting. |
+| Docstrings     | Checks for missing or improperly formatted docstrings in code.            |
+| Comments       | Ensures comments are clear, properly formatted, and start with a space.   |
+| Annotations    | Detects TODO, FIXME, and other annotations in the code.                   |
+| Imports        | Identifies unused imports and suggests their removal.                     |
+| Last Line      | Ensures the file ends with a newline character.                           |
+| Function Names | Verifies that function names follow the snake_case naming convention.     |
+
+---
 
 ### Installation
-To install BettyPy, execute the following command:
+To install BettyPy, execute the following commands:
 
 ```bash
-git clone https://github.com/ItsZmainDev/BettyPy.git
-cd BettyPy
+$ git clone https://github.com/ItsZmainDev/BettyPy.git
+$ cd BettyPy
+$ ./install.sh
 ```
 
-Then, run the installation script:
-
-```bash
-./install.sh
-```
+---
 
 ### Usage
-To use BettyPy, you can run the following command in your terminal:
+Run BettyPy on your Python file with the following command:
 
 ```bash
-bettypy <path_to_your_python_file>
+$ bettypy <path_to_your_python_file>
 ```
 
+---
+
 ### Example
-###### Example Python file to test BettyPy
+#### Example Python file
 ```python
 # This is an example Python file
 
@@ -59,29 +77,47 @@ def function_example():
 
 ####test
 ```
-###### Command to run BettyPy
+
+#### Command to run BettyPy
 ```bash
-bettypy example.py
+$ bettypy example.py
 ```
-###### Output of BettyPy
+
+#### Output of BettyPy
 ```bash
 root@eddc83f1bb46:/home/ubuntu/BettyPy# bettypy tests/testfile.py 
-[2025-04-12 15:07:25] [INFO] tests/testfile.py - Starting analysis...
-[2025-04-12 15:07:25] [WARNING] tests/testfile.py:4: line too long (125 characters)
-[2025-04-12 15:07:25] [WARNING] tests/testfile.py:5: line too long (82 characters)
-[2025-04-12 15:07:25] [WARNING] tests/testfile.py:7: comment should start with a space after #
-[2025-04-12 15:07:25] [WARNING] tests/testfile.py:7: comment too short (4 characters)
-[2025-04-12 15:07:25] [WARNING] tests/testfile.py: file should end with a new line
-[2025-04-12 15:07:25] [WARNING] tests/testfile.py:3: Function 'def function_example():' is missing a docstring.
-[2025-04-12 15:07:25] [ERROR] Analysis completed with 6 errors.
+[2025-04-14 22:30:46] [INFO] tests/testfile.py - Starting analysis...
+[2025-04-14 22:30:46] [WARNING] tests/testfile.py:4: line too long (125 characters)
+[2025-04-14 22:30:46] [WARNING] tests/testfile.py:5: line too long (82 characters)
+[2025-04-14 22:30:46] [WARNING] tests/testfile.py:7: comment should start with a space after #
+[2025-04-14 22:30:46] [WARNING] tests/testfile.py:7: comment too short (4 characters)
+[2025-04-14 22:30:46] [WARNING] tests/testfile.py: file should end with a new line
+[2025-04-14 22:30:46] [WARNING] tests/testfile.py:3: Function 'def function_example():' is missing a docstring.
+[2025-04-14 22:30:46] [WARNING] tests/testfile.py:: line should be indented with tabs, not spaces. Please use tabs for indentation.
+[2025-04-14 22:30:46] [ERROR] Analysis completed with 7 errors.
 root@eddc83f1bb46:/home/ubuntu/BettyPy# 
 ```
+
+---
+
+### Requirements
+- Linux or macOS (Windows support is experimental)
+
+---
+
+### Contributing
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a pull request.
+
+---
 
 ### License
 This project is licensed under the Mozilla Public License 2.0. See the [LICENSE](LICENSE) file for details.
 
-### Contributing
-Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request.
+---
 
 ### Authors &copy;
 
