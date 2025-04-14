@@ -105,12 +105,42 @@ root@eddc83f1bb46:/home/ubuntu/BettyPy#
 
 ---
 
+---
+
 ### Contributing
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -m 'Add your feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
+
+We welcome contributions to improve BettyPy! Follow these steps to get started:
+
+#### Option 1: Fork and Submit a Pull Request
+1. Fork the repository on GitHub.
+2. Create a new branch for your feature or bug fix:
+   ```bash
+   $ git checkout -b my-feature
+   ```
+3. Make your changes and commit them with a clear message:
+   ```bash
+   $ git commit -m "Add my feature"
+   ```
+4. Push your changes to your fork:
+   ```bash
+   $ git push origin my-feature
+   ```
+5. Open a pull request to the main repository.
+6. Your changes will be reviewed, and if approved, merged into the main branch.
+
+#### Option 2: Report an Issue
+1. Found a bug or have a feature request? Create an issue in the GitHub repository.
+2. Provide a clear and detailed description of the problem or suggestion.
+3. Include relevant details, such as steps to reproduce the issue or examples of the desired feature.
+4. If you'd like to work on the issue, assign it to yourself or request assignment.
+5. Once your work is complete, submit a pull request referencing the issue.
+
+#### Review Process
+- All pull requests are reviewed by project maintainers.
+- Feedback will be provided if changes are needed.
+- Once approved, your contribution will be merged, and you’ll be credited for your work.
+
+Thank you for helping improve BettyPy!
 
 ---
 
