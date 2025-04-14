@@ -106,8 +106,6 @@ root@eddc83f1bb46:/home/ubuntu/BettyPy#
 
 ---
 
----
-
 ### Contributing
 
 We welcome contributions to improve BettyPy! Follow these steps to get started:
