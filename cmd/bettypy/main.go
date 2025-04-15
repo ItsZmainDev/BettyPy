@@ -8,6 +8,7 @@ import (
     "fmt"
     "io/ioutil"
     "strings"
+    "time"
 )
 
 func main() {
@@ -34,8 +35,12 @@ func main() {
         }
 
         for _, filename := range files {
+            fmt.Printf("==========================\n")
+            fmt.Printf("File: %s\n", filename)
+            fmt.Printf("==========================\n")
+
             if filepath.Ext(filename) != ".py" {
-                logger.Warning(fmt.Sprintf("%s is not a Python file, skipping...", filename))
+                logger.Error(fmt.Sprintf("%s is not a Python file, skipping...", filename))
                 continue
             }
 
@@ -48,6 +53,7 @@ func main() {
             }
 
             content := string(contentBytes)
+
             logger.Info(fmt.Sprintf("%s - Starting analysis...", filename))
 
             checkers := []checker.Checker{
@@ -65,6 +71,7 @@ func main() {
             for _, c := range checkers {
                 errors := c.Run()
                 for _, e := range errors {
+                    time.Sleep(300 * time.Millisecond)
                     logger.Warning(e)
                     totalErrors++
                 }
