@@ -141,6 +141,12 @@ We welcome contributions to improve BettyPy! Follow these steps to get started:
 5. Open a pull request to the main repository.
 6. Your changes will be reviewed, and if approved, merged into the main branch.
 
+>##### Note:
+> - For build the project, you need to use the command:
+> ```bash
+> $ go build cmd/bettypy/main.go
+> ```
+
 #### Option 2: Report an Issue
 1. Found a bug or have a feature request? Create an issue in the GitHub repository.
 2. Provide a clear and detailed description of the problem or suggestion.
