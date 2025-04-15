@@ -48,8 +48,6 @@ BettyPy provides a set of rules and guidelines for writing Python code in the Be
 
 ---
 
----
-
 ### Installation
 
 ##### Linux
