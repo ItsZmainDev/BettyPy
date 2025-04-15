@@ -60,7 +60,8 @@ $ cd BettyPy
 $ sudo ./install.sh
 ```
 
-##### Windows
+##### Windows - Not available yet
+> **Note:** Windows support is experimental and may not work as expected. Use at your own risk.
 To install BettyPy on Windows, follow these steps:
 ```bash
 $ git clone https://github.com/ItsZmainDev/BettyPy.git
