@@ -18,6 +18,15 @@ func (c *CodetagChecker) Run() []string {
     var errors []string
     lines := strings.Split(c.Content, "\n")
 
+    codetags := map[string]bool{
+        "TODO":  true,
+        "FIXME": true,
+        "HACK":  true,
+        "NOTE":  true,
+        "XXX":   true,
+        "BUG":  true,
+    }
+
     for i, line := range lines {
         trimmedLine := line
         hashCount := 0
@@ -30,12 +39,12 @@ func (c *CodetagChecker) Run() []string {
         if hashCount > 0 {
             trimmedLine = strings.TrimSpace(trimmedLine)
 
-			switch {
-				case strings.Contains(trimmedLine, "TODO"):
-					errors = append(errors, fmt.Sprintf("%s:%d: TODO comment detected (%s)", c.Filename, i+1, trimmedLine))
-				case strings.Contains(trimmedLine, "FIXME"):
-					errors = append(errors, fmt.Sprintf("%s:%d: FIXME comment detected (%s)", c.Filename, i+1, trimmedLine))
-			}
+            for tag := range codetags {
+                if strings.Contains(trimmedLine, tag) {
+                    errors = append(errors, fmt.Sprintf("%s:%d: %s codetag detected (%s)", c.Filename, i+1, tag, trimmedLine))
+                    break
+                }
+            }
         }
     }
 
