@@ -38,13 +38,13 @@ BettyPy provides a set of rules and guidelines for writing Python code in the Be
 | Empty files    | Detects and warns about empty files in the project.                        |
 | Line Length    | Ensures that lines do not exceed 80 characters for better readability.     |
 | Indentation    | Enforces 4 spaces per indentation level to maintain consistent formatting. |
-| Docstrings     | Checks for missing or improperly formatted docstrings in code.            |
-| Comments       | Ensures comments are clear, properly formatted, and start with a space.   |
-| Annotations    | Detects TODO, FIXME, and other annotations in the code.                   |
-| Imports        | Identifies unused imports and suggests their removal.                     |
+| Docstring     | Checks for missing or improperly formatted docstrings in code.            |
+| Comment       | Ensures comments are clear, properly formatted, and start with a space.   |
+| Codetag    | Detects TODO, FIXME, and other annotations in the code.                   |
+| Import        | Identifies unused imports and suggests their removal.                     |
 | Last Line      | Ensures the file ends with a newline character.                           |
-| Function Names | Verifies that function names follow the snake_case naming convention.     |
-| Used Functions | Checks for unused functions in the code.                               |
+| Function Name | Verifies that function names follow the snake_case naming convention.     |
+| Used Function | Checks for unused functions in the code.                               |
 
 ---
 

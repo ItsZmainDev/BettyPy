@@ -5,16 +5,16 @@ import (
     "strings"
 )
 
-type AnotationChecker struct {
+type CodetagChecker struct {
     Content  string
     Filename string
 }
 
-func NewAnotationChecker(content string, filename string) *AnotationChecker {
-    return &AnotationChecker{Content: content, Filename: filename}
+func NewCodetagChecker(content string, filename string) *CodetagChecker {
+    return &CodetagChecker{Content: content, Filename: filename}
 }
 
-func (c *AnotationChecker) Run() []string {
+func (c *CodetagChecker) Run() []string {
     var errors []string
     lines := strings.Split(c.Content, "\n")
 

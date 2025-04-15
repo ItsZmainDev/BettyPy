@@ -56,7 +56,7 @@ func main() {
                 checker.NewNewLineChecker(content, filename),
                 checker.NewDockstringChecker(content, filename),
                 checker.NewIdentationChecker(strings.Split(content, "\n"), filename),
-                checker.NewAnotationChecker(content, filename),
+                checker.NewCodetagChecker(content, filename),
                 checker.NewEmptyFileChecker(content, filename),
                 checker.NewUnusedImportChecker(strings.Split(content, "\n"), filename),
                 checker.NewFunctionChecker(strings.Split(content, "\n"), filename),
