@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Variables
+# Variables for installation
 INSTALL_DIR="/usr/local/bin"
 MAN_DIR="/usr/local/share/man/man1"
 SCRIPT_NAME="bettypy"
