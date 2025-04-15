@@ -20,9 +20,9 @@ BettyPy is a Python style guide for the Betty programming language. It enforces 
 - [Example](#example)
 - [Requirements](#requirements)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 - [Authors](#authors)
+- [License](#license)
 
 ---
 
@@ -143,11 +143,6 @@ Thank you for helping improve BettyPy!
 
 ---
 
-### License
-This project is licensed under the Mozilla Public License 2.0. See the [LICENSE](LICENSE) file for details.
-
----
-
 ### Acknowledgments
 
 <p align="center">
@@ -167,3 +162,8 @@ This project is licensed under the Mozilla Public License 2.0. See the [LICENSE]
 ### Authors &copy;
 
 - **Martin Clement** - [Github Profile](https://github.com/ItsZmainDev)
+
+---
+
+### License
+This project is licensed under the Mozilla Public License 2.0. See the [LICENSE](LICENSE) file for details.
