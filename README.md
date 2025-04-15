@@ -47,13 +47,25 @@ BettyPy provides a set of rules and guidelines for writing Python code in the Be
 
 ---
 
+---
+
 ### Installation
-To install BettyPy, execute the following commands:
+
+##### Linux
+To install BettyPy on Linux, follow these steps:
 
 ```bash
 $ git clone https://github.com/ItsZmainDev/BettyPy.git
 $ cd BettyPy
-$ ./install.sh
+$ sudo ./install.sh
+```
+
+##### Windows
+To install BettyPy on Windows, follow these steps:
+```bash
+$ git clone https://github.com/ItsZmainDev/BettyPy.git
+$ cd BettyPy
+$ install_windows.bat
 ```
 
 ---
