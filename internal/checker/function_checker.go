@@ -2,6 +2,7 @@ package checker
 
 import (
     "fmt"
+    "strings"
 )
 
 type FunctionChecker struct {
@@ -15,37 +16,58 @@ func NewFunctionChecker(content []string, filename string) *FunctionChecker {
 
 func (c *FunctionChecker) Run() []string {
     var errors []string
+    definedFunctions := make(map[string]int)
+    usedFunctions := make(map[string]bool)
 
-	for lineC, line := range c.Content {
-		if len(line) > 0 && line[0] == 'd' && line[1] == 'e' && line[2] == 'f' {
-			start := 4
-			for start < len(line) && line[start] == ' ' {
-				start++
+    for lineC, line := range c.Content {
+        if len(line) > 0 && strings.HasPrefix(line, "def ") {
+            start := 4
+            for start < len(line) && line[start] == ' ' {
+                start++
+            }
+
+            end := start
+            for end < len(line) && line[end] != '(' {
+                end++
+            }
+
+            functionName := line[start:end]
+            if functionName != "" && functionName != "def" {
+                if !isSnakeCase(functionName) {
+                    errors = append(errors, fmt.Sprintf("%s:%d: Function name '%s' should be in snake_case", c.Filename, lineC+1, functionName))
+                }
+                definedFunctions[functionName] = lineC + 1
+            }
+        }
+    }
+
+	for i, line := range c.Content {
+		trimmedLine := strings.TrimSpace(line)
+		for functionName, defLine := range definedFunctions {
+			if i+1 == defLine {
+				continue
 			}
 
-			end := start
-			for end < len(line) && line[end] != '(' {
-				end++
-			}
-
-			functionName := line[start:end]
-			if functionName != "" && functionName != "def" {
-				if !isSnakeCase(functionName) {
-					errors = append(errors, fmt.Sprintf("%s:%d: Function name '%s' should be in snake_case", c.Filename, lineC+1, functionName))
-				}
+			if strings.Contains(trimmedLine, functionName+"(") {
+				usedFunctions[functionName] = true
 			}
 		}
 	}
-    
+
+    for functionName, line := range definedFunctions {
+        if !usedFunctions[functionName] {
+            errors = append(errors, fmt.Sprintf("%s:%d: Function '%s' is defined but not used", c.Filename, line, functionName))
+        }
+    }
+
     return errors
 }
 
 func isSnakeCase(s string) bool {
-	for i := 0; i < len(s); i++ {
-		if s[i] >= 'A' && s[i] <= 'Z' {
-			return false
-		}
-	}
-
-	return true
+    for i := 0; i < len(s); i++ {
+        if s[i] >= 'A' && s[i] <= 'Z' {
+            return false
+        }
+    }
+    return true
 }
