@@ -13,6 +13,9 @@ BettyPy is a Python style guide for the Betty programming language. It enforces 
 ---
 
 ### Table of Contents
+<details>
+<summary>Click to expand</summary>
+
 - [Description](#description)
 - [Features](#features)
 - [Installation](#installation)
@@ -23,6 +26,8 @@ BettyPy is a Python style guide for the Betty programming language. It enforces 
 - [Acknowledgments](#acknowledgments)
 - [Authors](#authors)
 - [License](#license)
+
+</details>
 
 ---
 
