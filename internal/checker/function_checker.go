@@ -3,6 +3,7 @@ package checker
 import (
     "fmt"
     "strings"
+    "bettypy/internal/utils"
 )
 
 type FunctionChecker struct {
@@ -33,7 +34,7 @@ func (c *FunctionChecker) Run() []string {
 
             functionName := line[start:end]
             if functionName != "" && functionName != "def" {
-                if !isSnakeCase(functionName) {
+                if !utils.IsSnakeCase(functionName) {
                     errors = append(errors, fmt.Sprintf("%s:%d: Function name '%s' should be in snake_case", c.Filename, lineC+1, functionName))
                 }
                 definedFunctions[functionName] = lineC + 1
@@ -61,13 +62,4 @@ func (c *FunctionChecker) Run() []string {
     }
 
     return errors
-}
-
-func isSnakeCase(s string) bool {
-    for i := 0; i < len(s); i++ {
-        if s[i] >= 'A' && s[i] <= 'Z' {
-            return false
-        }
-    }
-    return true
 }
