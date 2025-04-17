@@ -49,7 +49,9 @@ BettyPy provides a set of rules and guidelines for writing Python code in the Be
 | Import        | Identifies unused imports and suggests their removal.                     |
 | Last Line      | Ensures the file ends with a newline character.                           |
 | Function Name | Verifies that function names follow the snake_case naming convention.     |
-| Used Function | Checks for unused functions in the code.                               |
+| Unused Function | Detects unused functions in the code.                                   |
+| Variable Name  | Ensures variable names follow the snake_case naming convention.         |
+| Unused Variable | Detects unused variables in the code.                                   |
 
 ---
 
